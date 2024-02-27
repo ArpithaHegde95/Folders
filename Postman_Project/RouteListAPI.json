@@ -1,0 +1,134 @@
+{
+  "Route": [
+    {
+      "id": 1,
+      "Resource name": "Bhavishya Gp",
+      "Pickup/Drop Location": "Malgala Bhramagiri Appartement",
+      "Pickup Time": "6:45",
+      "Route No": "Route No. 46",
+      "Vehicle Type": "TT",
+      "Driver Name": "Naveen",
+      "Vendor Name": "Vinayaka"
+    },
+    {
+      "id": 2,
+      "Resource name": "Francis Anthonappa",
+      "Pickup/Drop Location": "Pattagarapalya main Road.",
+      "Pickup Time": "6:45",
+      "Route No": "Route No. 46",
+      "Vehicle Type": "TT",
+      "Driver Name": "Naveen",
+      "Vendor Name": "Vinayaka"
+    },
+    {
+      "id": 3,
+      "Resource name": "Abhishek",
+      "Pickup/Drop Location": "Pattegarpalya Bus Stop",
+      "Pickup Time": "6:45",
+      "Route No": "Route No. 46",
+      "Vehicle Type": "TT",
+      "Driver Name": "Naveen",
+      "Vendor Name": "Vinayaka"
+    },
+    {
+      "id": 4,
+      "Resource name": "Shrikanth Achary R",
+      "Pickup/Drop Location": "Pattagarpalya Bus Stop",
+      "Pickup Time": "6:45",
+      "Route No": "Route No. 46",
+      "Vehicle Type": "TT",
+      "Driver Name": "Naveen",
+      "Vendor Name": "Vinayaka"
+    },
+    {
+      "id": 5,
+      "Resource name": "Arpitha Hegde",
+      "Pickup/Drop Location": "Pattegharpalya",
+      "Pickup Time": "6:45",
+      "Route No": "Route No. 46",
+      "Vehicle Type": "TT",
+      "Driver Name": "Naveen",
+      "Vendor Name": "Vinayaka"
+    },
+    {
+      "id": 6,
+      "Resource name": "Suhas J",
+      "Pickup/Drop Location": "Pattagarpalya Bus Stop",
+      "Pickup Time": "6:48",
+      "Route No": "Route No. 46",
+      "Vehicle Type": "TT",
+      "Driver Name": "Naveen",
+      "Vendor Name": "Vinayaka"
+    },
+    {
+      "id": 7,
+      "Resource name": "JEEVAN K V",
+      "Pickup/Drop Location": "RAMAKRISHNA LAYOUT,NAGARBHAVI 2ND STAGE",
+      "Pickup Time": "6:48",
+      "Route No": "Route No. 46",
+      "Vehicle Type": "TT",
+      "Driver Name": "Naveen",
+      "Vendor Name": "Vinayaka"
+    },
+    {
+      "id": 8,
+      "Resource name": "DHARAMVEER M K",
+      "Pickup/Drop Location": "Shobha hospital Prashanth  Nagar, Vijay nagrar",
+      "Pickup Time": "6:50",
+      "Route No": "Route No. 46",
+      "Vehicle Type": "TT",
+      "Driver Name": "Naveen",
+      "Vendor Name": "Vinayaka"
+    },
+    {
+      "id": 9,
+      "Resource name": "DadaMouli.D",
+      "Pickup/Drop Location": "Sajjepalya,Nagarbhavi",
+      "Pickup Time": "6:50",
+      "Route No": "Route No. 46",
+      "Vehicle Type": "TT",
+      "Driver Name": "Naveen",
+      "Vendor Name": "Vinayaka"
+    },
+    {
+      "id": 10,
+      "Resource name": "Mohan Narasaiah",
+      "Pickup/Drop Location": "AmarJyothi nagar",
+      "Pickup Time": "6:50",
+      "Route No": "Route No. 46",
+      "Vehicle Type": "TT",
+      "Driver Name": "Naveen",
+      "Vendor Name": "Vinayaka"
+    },
+    {
+      "id": 11,
+      "Resource name": "LAKSHMI M",
+      "Pickup/Drop Location": "NEAR WATER TANK MAGADI ROAD",
+      "Pickup Time": "6:51",
+      "Route No": "Route No. 46",
+      "Vehicle Type": "TT",
+      "Driver Name": "Naveen",
+      "Vendor Name": "Vinayaka"
+    },
+    {
+      "id": 12,
+      "Resource name": "Prakash Eshwara",
+      "Pickup/Drop Location": "Govindarajanagar (Behind Govt High School)",
+      "Pickup Time": "6:55",
+      "Route No": "Route No. 46",
+      "Vehicle Type": "TT",
+      "Driver Name": "Naveen",
+      "Vendor Name": "Vinayaka"
+    },
+    {
+      "id": 13,
+      "Resource name": "KIRAN FAKRI",
+      "Pickup/Drop Location": "Hoodi circle",
+      "Pickup Time": "7:20",
+      "Route No": "BUS 101",
+      "Vehicle Type": "BUS",
+      "Driver Name": "Umesh",
+      "Vendor Name": "Vinayaka"
+    }
+  ]
+}

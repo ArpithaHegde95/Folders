@@ -1,0 +1,312 @@
+{
+	"info": {
+		"_postman_id": "9a2cd6e4-bc0e-4f98-af0b-760d67c03d62",
+		"name": "RouteList_Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25845104",
+		"_collection_link": "https://www.postman.com/grey-sunset-857596/workspace/routelist/collection/25845104-9a2cd6e4-bc0e-4f98-af0b-760d67c03d62?action=share&source=collection_link&creator=25845104"
+	},
+	"item": [
+		{
+			"name": "GET Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Validation of Get Request\",()=>\r",
+							"{\r",
+							"//Check Status code\r",
+							"pm.response.to.have.status(200);\r",
+							"//Check Status message\r",
+							"pm.response.to.have.status(\"OK\");\r",
+							"//Check the Response time\r",
+							"pm.expect(pm.response.responseTime).to.be.below(50);\r",
+							"//Check response body\r",
+							"var jsonData=pm.response.json();\r",
+							"pm.expect(jsonData).to.be.an(\"Object\");\r",
+							"pm.expect(jsonData.id).to.be.a(\"number\");\r",
+							"pm.expect(jsonData[\"Resource name\"]).to.be.a(\"string\");\r",
+							"pm.expect(jsonData[\"Pickup/Drop Location\"]).to.be.a(\"string\");\r",
+							"pm.expect(jsonData[\"Pickup Time\"]).to.be.a(\"string\");\r",
+							"pm.expect(jsonData[\"Route No\"]).to.be.a(\"string\");\r",
+							"pm.expect(jsonData[\"Vehicle Type\"]).to.be.a(\"string\");\r",
+							"pm.expect(jsonData[\"Driver Name\"]).to.be.a(\"string\");\r",
+							"pm.expect(jsonData[\"Vendor Name\"]).to.be.a(\"string\");\r",
+							"//Check JSON fields in response\r",
+							"pm.expect(jsonData.id).to.eql(1);\r",
+							"pm.expect(jsonData[\"Resource name\"]).to.eql(\"Bhavishya Gp\");\r",
+							"pm.expect(jsonData[\"Pickup/Drop Location\"]).to.eql(\"Malgala Bhramagiri Appartement\");\r",
+							"pm.expect(jsonData[\"Pickup Time\"]).to.eql(\"6:45\");\r",
+							"pm.expect(jsonData[\"Route No\"]).to.eql(\"Route No. 46\");\r",
+							"pm.expect(jsonData[\"Vehicle Type\"]).to.eql(\"TT\");\r",
+							"pm.expect(jsonData[\"Driver Name\"]).to.eql(\"Naveen\");\r",
+							"pm.expect(jsonData[\"Vendor Name\"]).to.eql(\"Vinayaka\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/Route",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Route"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Validation of Get Request\",()=>\r",
+							"{\r",
+							"//Check Status code\r",
+							"pm.response.to.have.status(201);\r",
+							"//Check Status message\r",
+							"pm.response.to.have.status(\"Created\");\r",
+							"//Check the Response time\r",
+							"pm.expect(pm.response.responseTime).to.be.below(100);\r",
+							"//Check response body\r",
+							"var jsonData=pm.response.json();\r",
+							"pm.expect(jsonData).to.be.an(\"Object\");\r",
+							"pm.expect(jsonData.id).to.be.a(\"number\");\r",
+							"pm.expect(jsonData[\"Resource name\"]).to.be.a(\"string\");\r",
+							"pm.expect(jsonData[\"Pickup/Drop Location\"]).to.be.a(\"string\");\r",
+							"pm.expect(jsonData[\"Pickup Time\"]).to.be.a(\"string\");\r",
+							"pm.expect(jsonData[\"Route No\"]).to.be.a(\"string\");\r",
+							"pm.expect(jsonData[\"Vehicle Type\"]).to.be.a(\"string\");\r",
+							"pm.expect(jsonData[\"Driver Name\"]).to.be.a(\"string\");\r",
+							"pm.expect(jsonData[\"Vendor Name\"]).to.be.a(\"string\");\r",
+							"//Check JSON fields in response\r",
+							"//pm.expect(jsonData.id).to.eql(14);\r",
+							"pm.expect(jsonData[\"Resource name\"]).to.eql(\"Raghavendra Rao\");\r",
+							"pm.expect(jsonData[\"Pickup/Drop Location\"]).to.eql(\"Bhuvaneshwari nagar 1st stage bus stop (Doddabasti road)\");\r",
+							"pm.expect(jsonData[\"Pickup Time\"]).to.eql(\"6:31\");\r",
+							"pm.expect(jsonData[\"Route No\"]).to.eql(\"Route No. 01\");\r",
+							"pm.expect(jsonData[\"Vehicle Type\"]).to.eql(\"TT\");\r",
+							"pm.expect(jsonData[\"Driver Name\"]).to.eql(\"SUJAY\");\r",
+							"pm.expect(jsonData[\"Vendor Name\"]).to.eql(\"Sree\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " \r\n {\r\n\"Resource name\": \"Raghavendra Rao\",\r\n\"Pickup/Drop Location\": \"Bhuvaneshwari nagar 1st stage bus stop (Doddabasti road)\",\r\n\"Pickup Time\": \"6:31\",\r\n\"Route No\": \"Route No. 01\",\r\n\"Vehicle Type\": \"TT\",\r\n\"Driver Name\": \"SUJAY\",\r\n\"Vendor Name\": \"Sree\"\r\n}\r\n ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/Route",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Route"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Validation of Get Request\",()=>\r",
+							"{\r",
+							"//Check Status code\r",
+							"pm.response.to.have.status(200);\r",
+							"//Check Status message\r",
+							"pm.response.to.have.status(\"OK\");\r",
+							"//Check the Response time\r",
+							"pm.expect(pm.response.responseTime).to.be.below(100);\r",
+							"//Check response body\r",
+							"var jsonData=pm.response.json();\r",
+							"pm.expect(jsonData).to.be.an(\"Object\");\r",
+							"pm.expect(jsonData.id).to.be.a(\"number\");\r",
+							"pm.expect(jsonData[\"Resource name\"]).to.be.a(\"string\");\r",
+							"pm.expect(jsonData[\"Pickup/Drop Location\"]).to.be.a(\"string\");\r",
+							"pm.expect(jsonData[\"Pickup Time\"]).to.be.a(\"string\");\r",
+							"pm.expect(jsonData[\"Route No\"]).to.be.a(\"string\");\r",
+							"pm.expect(jsonData[\"Vehicle Type\"]).to.be.a(\"string\");\r",
+							"pm.expect(jsonData[\"Driver Name\"]).to.be.a(\"string\");\r",
+							"pm.expect(jsonData[\"Vendor Name\"]).to.be.a(\"string\");\r",
+							"//Check JSON fields in response\r",
+							"//pm.expect(jsonData.id).to.eql(14);\r",
+							"pm.expect(jsonData[\"Resource name\"]).to.eql(\"Raghavendra Rao\");\r",
+							"pm.expect(jsonData[\"Pickup/Drop Location\"]).to.eql(\"Bhuvaneshwari nagar 1st stage bus stop (Doddabasti road)\");\r",
+							"pm.expect(jsonData[\"Pickup Time\"]).to.eql(\"6:31\");\r",
+							"pm.expect(jsonData[\"Route No\"]).to.eql(\"Route No. 01\");\r",
+							"pm.expect(jsonData[\"Vehicle Type\"]).to.eql(\"TT\");\r",
+							"pm.expect(jsonData[\"Driver Name\"]).to.eql(\"Bharghav\");\r",
+							"pm.expect(jsonData[\"Vendor Name\"]).to.eql(\"Sree\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Resource name\": \"Raghavendra Rao\",\r\n    \"Pickup/Drop Location\": \"Bhuvaneshwari nagar 1st stage bus stop (Doddabasti road)\",\r\n    \"Pickup Time\": \"6:31\",\r\n    \"Route No\": \"Route No. 01\",\r\n    \"Vehicle Type\": \"TT\",\r\n    \"Driver Name\": \"Bharghav\",\r\n    \"Vendor Name\": \"Sree\",\r\n    \"id\": 14\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/Route/14",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Route",
+						"14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Validation of Get Request\",()=>\r",
+							"{\r",
+							"//Check Status code\r",
+							"pm.response.to.have.status(200);\r",
+							"//Check Status message\r",
+							"pm.response.to.have.status(\"OK\");\r",
+							"//Check the Response time\r",
+							"pm.expect(pm.response.responseTime).to.be.below(100);\r",
+							"\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/Route/14",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Route",
+						"14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Validation of Get Request\",()=>\r",
+							"{\r",
+							"//Check Status code\r",
+							"pm.response.to.have.status(200);\r",
+							"//Check Status message\r",
+							"pm.response.to.have.status(\"OK\");\r",
+							"//Check the Response time\r",
+							"pm.expect(pm.response.responseTime).to.be.below(100);\r",
+							"//Check response body\r",
+							"var jsonData=pm.response.json();\r",
+							"pm.expect(jsonData).to.be.an(\"Object\");\r",
+							"pm.expect(jsonData.id).to.be.a(\"number\");\r",
+							"pm.expect(jsonData[\"Resource name\"]).to.be.a(\"string\");\r",
+							"pm.expect(jsonData[\"Pickup/Drop Location\"]).to.be.a(\"string\");\r",
+							"pm.expect(jsonData[\"Pickup Time\"]).to.be.a(\"string\");\r",
+							"pm.expect(jsonData[\"Route No\"]).to.be.a(\"string\");\r",
+							"pm.expect(jsonData[\"Vehicle Type\"]).to.be.a(\"string\");\r",
+							"pm.expect(jsonData[\"Driver Name\"]).to.be.a(\"string\");\r",
+							"pm.expect(jsonData[\"Vendor Name\"]).to.be.a(\"string\");\r",
+							"//Check JSON fields in response\r",
+							"//pm.expect(jsonData.id).to.eql(14);\r",
+							"pm.expect(jsonData[\"Resource name\"]).to.eql(\"Raghavendra Rao\");\r",
+							"pm.expect(jsonData[\"Pickup/Drop Location\"]).to.eql(\"Kengeri\");\r",
+							"pm.expect(jsonData[\"Pickup Time\"]).to.eql(\"6:31\");\r",
+							"pm.expect(jsonData[\"Route No\"]).to.eql(\"Route No. 01\");\r",
+							"pm.expect(jsonData[\"Vehicle Type\"]).to.eql(\"TT\");\r",
+							"pm.expect(jsonData[\"Driver Name\"]).to.eql(\"Bharghav\");\r",
+							"pm.expect(jsonData[\"Vendor Name\"]).to.eql(\"Sree\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Pickup/Drop Location\": \"Kengeri\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/Route/14",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Route",
+						"14"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
